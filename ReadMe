@@ -1,0 +1,11 @@
+Ce am adaugat nou in schelet:
+-TODO-urile(duh!)
+-Clasele specifice operatiilor vcs(inclusiv clasa de operatie vcs invalida)
+-clasa Commit cu campurile: -FileSystemSnapshot snapShot : snapshotul specific commitului
+			    -int commitID : id-ul generat al commitului
+			    -String message: mesajul commitului
+ 	Am suprascris metoda equals pt a compara commiturile doar dupa id
+-clasa Branches(un LinkedHashMap<String,<List<Commit>>) unde cheia este numele branch-ului iar valoarea este lista cu commiturile branchului
+
+Astfel, vcs contine un camp branches in care se retin branchurile si commiturile lor, un camp activeBranch care contine numele branch-ului activ,
+si o lista tracker care va contine staged changes.
